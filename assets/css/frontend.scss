@@ -1,0 +1,31 @@
+// Component Sass.
+.accordion-header {
+    cursor: pointer;
+    text-align: left;
+	width: 100%;
+	background: transparent;
+	color: inherit;
+	padding: 0.5em 0;
+	&:hover,
+	&:focus {
+		background: transparent;
+	}
+    &:before {
+        content: "+ ";
+		display: inline-block;
+		width: 1em;
+		margin-left: -0.5em;
+    }
+    &.is-active {
+        &:before {
+            content: "- ";
+        }
+    }
+}
+
+.js .accordion-content {
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
